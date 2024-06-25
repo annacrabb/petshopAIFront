@@ -2,13 +2,9 @@ import React from 'react';
 import Banner from '../assets/contact.banner.jack.png';
 import Logo from '../assets/slimtidetogether.png';
 
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import { Row, Col } from 'react-bootstrap';
 
 import ContactForm from '../forms/ContactForm';
-// import 'bootstrap-icons/font/bootstrap-icons.css';
 
 const Contact = () => {
   return (

@@ -85,15 +85,21 @@
   
   nav{
       background-color: #6dacc1;
-
+    
   }
   
   .navHeader{
       font-family: "Yellowtail";
   }
 
+  /* .navLink{
+      color: #000000a6;
+      padding: 8px;
+  } */
+
   .navLink:hover {
       color: #ebebeb;
+
   }
   
   .customBorder{
@@ -134,6 +140,7 @@
     padding-bottom: 1px;
     margin-top: 1px;
   }
+
 
   .badge {
     background-color: #6dacc1 !important;

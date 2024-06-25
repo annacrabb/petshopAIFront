@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
+import BACKEND_URL from '../config';
 
 const PetForm = () => {
 
@@ -17,7 +18,7 @@ const PetForm = () => {
         const pet = { petName, petType, picture, desc, cost }
         console.log('Sending data to server:', pet)
 
-        const response = await fetch('http://localhost:4000/api/routes/sponsor', {
+        const response = await fetch(BACKEND_URL + '/api/routes/sponsor', {
             method: 'POST',
             body: JSON.stringify(pet),
             headers: {

@@ -1,14 +1,14 @@
 
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
-import Logo from '../assets/slimtidetogether.png';
 import Banner from '../assets/acknow.banner.png';
+import BACKEND_URL from '../config';
 
 const Acknowledgements = () => {
   const [sponsors, setSponsors] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:4000/api/routes/acknowledgements')
+    axios.get(BACKEND_URL + '/api/routes/acknowledgements')
       .then(response => {
         if (response.data) {
 
@@ -53,7 +53,7 @@ const Acknowledgements = () => {
 
       <div className="container text-center">
         {sponsors && sponsors.map((sponsor) => (
-          <h2>{sponsor.sponsorName}</h2>
+          <h2 key={sponsor.id}>{sponsor.sponsorName}</h2>
         ))}
       </div>
 

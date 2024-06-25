@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Form, Button, Modal } from 'react-bootstrap';
+import BACKEND_URL from '../config' 
 
 const ContactForm = () => {
     const [email, setEmail] = useState('');
@@ -9,6 +10,7 @@ const ContactForm = () => {
     const [error, setError] = useState(null);
     const [emptyFields, setEmptyFields] = useState([]);
     const [showModal, setShowModal] = useState(false);
+    
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -16,7 +18,7 @@ const ContactForm = () => {
         const contact = { email, name, reason, subject };
         console.log('Sending data to server:', contact);
 
-        const response = await fetch('http://localhost:4000/api/contact', {
+        const response = await fetch(BACKEND_URL + '/api/contact', {
             method: 'POST',
             body: JSON.stringify(contact),
             headers: {

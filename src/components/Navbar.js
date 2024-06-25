@@ -23,10 +23,10 @@ function CustomNav() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link className="navLink" href="/">Home</Nav.Link>
-            <Nav.Link className="navLink" href="/about">About</Nav.Link>
-            <Nav.Link className="navLink" href="/conservation">Conservation</Nav.Link>
-            <Nav.Link className="navLink" href="/contact">Contact</Nav.Link>
+            <Nav.Link as={Link} className="navLink" to="/">Home</Nav.Link>
+            <Nav.Link as={Link} className="navLink" to="/about">About</Nav.Link>
+            <Nav.Link as={Link} className="navLink" to="/conservation">Conservation</Nav.Link>
+            <Nav.Link as={Link} className="navLink" to="/contact">Contact</Nav.Link>
             <NavDropdown title="Sponsor" id="basic-nav-dropdown" className="navLink">
               <NavDropdown.Item href="/tiers">Tiers</NavDropdown.Item>
               <NavDropdown.Item href="/sponsor">Sponsorship</NavDropdown.Item>

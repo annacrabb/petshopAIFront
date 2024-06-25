@@ -7,26 +7,28 @@ function Footer() {
     <footer>
       <Container>
         <footer className="py-3 my-4">
-          <Nav className="justify-content-center border-bottom pb-3 mb-3">
-            <Nav.Item>
+          <Nav className="justify-content-center mb-3">
+            <Nav.Link>
               <Link to='/' className="nav-link text-body-secondary">Home</Link>
-            </Nav.Item>
-            <Nav.Item>
+            </Nav.Link>
+            <Nav.Link>
               <Link to='/about' className="nav-link text-body-secondary">About</Link>
-            </Nav.Item>
-            <Nav.Item>
+            </Nav.Link>
+            <Nav.Link>
               <Link to='/conservation' className="nav-link text-body-secondary">Conservation</Link>
-            </Nav.Item>
-            <Nav.Item>
+            </Nav.Link>
+            <Nav.Link>
               <Link to='/contact' className="nav-link text-body-secondary">Contact</Link>
-            </Nav.Item>
-            <Nav.Item>
+            </Nav.Link>
+            <Nav.Link>
               <Link to='/sponsor' className="nav-link text-body-secondary">Sponsor</Link>
-            </Nav.Item>
-            <Nav.Item>
+            </Nav.Link>
+            <Nav.Link>
               <Link to='/acknowledgements' className="nav-link text-body-secondary">Acknowledgements</Link>
-            </Nav.Item>
+            </Nav.Link>
           </Nav>
+          <hr/>
+          
           <p className="text-center text-body-secondary">&copy; 2024 Tide Together, Inc</p>
         </footer>
       </Container>

@@ -2,8 +2,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import hermitCrabImage from '../assets/hermit.crab.cozumel.jack.png';
-
 const PetDetails = ({ pet }) => {
 
     // Function to handle image load error

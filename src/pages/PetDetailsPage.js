@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 //import { useAuthContext } from '../hooks/useAuthContext'; // Assuming this hook provides user info including token
+import BACKEND_URL from '../config'
 
 const PetDetailsPage = ({ match }) => {
     // const { user } = useAuthContext(); // Fetch user from context
@@ -10,7 +11,7 @@ const PetDetailsPage = ({ match }) => {
     useEffect(() => {
         const fetchPet = async () => {
             try {
-                const response = await axios.get(`http://localhost:4000/api/routes/sponsor/${match.params.id}`);
+                const response = await axios.get(BACKEND_URL + `/api/routes/sponsor/${match.params.id}`);
                 setPet(response.data);
 
             } catch (error) {
