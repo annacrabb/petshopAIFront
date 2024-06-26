@@ -1,66 +1,38 @@
 import React, { useEffect, useState } from "react";
-import Banner from "../assets/sponsor.banner.png";
-import PetDetails from '../components/PetDetails';
-import axios from 'axios';
 import { useAuthContext } from '../hooks/useAuthContext';
+import axios from 'axios';
+
 import BACKEND_URL from '../config';
 
+//import photo and component
+import Banner from "../assets/sponsor.banner.png";
+import PetDetails from './PetDetails';
+
 function Sponsor() {
-  const [petsOne, setPetsOne] = useState(null);
-  const [petsTwo, setPetsTwo] = useState(null);
-  const [petsThree, setPetsThree] = useState(null);
-  const {user} = useAuthContext();
+  const [selectedTier, setSelectedTier] = useState('tierOne');
+  const [pets, setPets] = useState(null);
+  const { user } = useAuthContext();
 
   useEffect(() => {
-    axios.get(BACKEND_URL + '/api/routes/sponsor/tierOne')
-        .then(response => {
-          if (response.data) {
-            setPetsOne(response.data);
-          } else {
-            console.log('no pets in tier one')
-          }
-        })
-        .catch(error => {
-          console.log('error:', error)
-        })
+    const fetchPets = async (tier) => {
+      try {
+        const response = await axios.get(`${BACKEND_URL}/api/routes/sponsor/${tier}`);
+        if (response.data) {
+          setPets(response.data);
+        } else {
+          console.log(`no pets in ${tier}`);
+        }
+      } catch (error) {
+        console.log('error:', error);
+      }
+    };
 
-    axios.get(BACKEND_URL + '/api/routes/sponsor/tierTwo')
-        .then(response => {
-          if (response.data) {
-            setPetsTwo(response.data);
-          } else {
-            console.log('no pets in tier two')
-          }
-        })
-        .catch(error => {
-          console.log('error:', error)
-        })
+    fetchPets(selectedTier);
+  }, [selectedTier]);
 
-    axios.get(BACKEND_URL + '/api/routes/sponsor/tierThree')
-        .then(response => {
-          if (response.data) {
-            setPetsThree(response.data);
-          } else {
-            console.log('no pets in tier three')
-          }
-        })
-        .catch(error => {
-          console.log('error:', error)
-        })
-  }, [])
-
-//   useEffect(() => {
-//     const fetchPet = async () => {
-//         const response = await fetch('api/routes/sponsor/tierOne', {
-//             headers: {'Authorization': `Bearer ${user.token}`},
-//         })
-//         const json = await response.json()
-
-//     }
-//     if(user) {
-//         fetchPet()
-//     }
-// }, [user])
+  const handleTierChange = (event) => {
+    setSelectedTier(event.target.value);
+  };
 
   return (
     <div className="body">
@@ -74,45 +46,40 @@ function Sponsor() {
       </div>
 
       {/* Title */}
-      <div className="container m-5 text-center">
+      <div className="container mt-5 text-center">
         <h1 className="customHeader">Sponsor</h1>
+        <div className="lead mb-3">
+        Welcome to Tide Together, where you can dive into the world of sponsorship! Choose a tier below to see the marine animals you can sponsor. Your contributions help keep our coral reefs alive and kicking (or should we say, swimming)!
+        </div>
+        <select className="sponsorSelect" value={selectedTier} onChange={handleTierChange}>
+          <option value="tierOne">Tier One - Coral Crusader</option>
+          <option value="tierTwo">Tier Two - Reef Rangers</option>
+          <option value="tierThree">Tier Three - Ocean Ambassadors</option>
+        </select>
       </div>
 
       {/* Content */}
-
-      {/* Tier One */}
-      <div className="container" id="tierOne">
-        <h3 className="m-5">Tier One - Coral Crusader</h3>
-      </div>
-      <div className="container text-center pets">  
-        {petsOne && petsOne.map((pet) => (
-          <PetDetails key={pet._id} pet={pet}/>
-        ))}
-      <hr />
-      </div>
-
-      {/* Tier Two */}
-      <div className="container" id="tierTwo">
-        <h3 className="m-5">Tier Two - Reef Rangers</h3>
-      </div>
-      <div className="container text-center">
-        {petsTwo && petsTwo.map((pet) => (
+      <div className="container text-center pets">
+        {pets && pets.map((pet) => (
           <PetDetails key={pet._id} pet={pet} />
         ))}
-      <hr />
-      </div>
-
-      {/* Tier Three */}
-      <div className="container" id="tierThree">
-        <h3 className="m-5">Tier Three - Ocean Ambassadors</h3>
-      </div>
-      <div className="container text-center">
-        {petsThree && petsThree.map((pet) => (
-          <PetDetails key={pet._id} pet={pet} />
-        ))}
+        {pets && pets.length === 0 && <p>No pets found in this tier.</p>}
       </div>
     </div>
   );
 }
 
 export default Sponsor;
+
+//   useEffect(() => {
+//     const fetchPet = async () => {
+//         const response = await fetch('api/routes/sponsor/tierOne', {
+//             headers: {'Authorization': Bearer ${user.token}},
+//         })
+//         const json = await response.json()
+
+//     }
+//     if(user) {
+//         fetchPet()
+//     }
+// }, [user])

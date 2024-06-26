@@ -1,21 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useLogout } from '../hooks/useLogout'
-import { useAuthContext } from '../hooks/useAuthContext'
+import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap'
 
+//import { useLogout } from '../hooks/useLogout'
+//import { useAuthContext } from '../hooks/useAuthContext'
 
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 
 
 function CustomNav() {
-  const { user } = useAuthContext()
-  const { logout } = useLogout()
-  const handleClick = () => {
-    logout()
-  }
+  // const { user } = useAuthContext()
+  // const { logout } = useLogout()
+  // const handleClick = () => {
+  //   logout()
+  // }
   return (
     <Navbar expand="lg" sticky="top" className="nav">
       <Container>
@@ -28,8 +25,8 @@ function CustomNav() {
             <Nav.Link as={Link} className="navLink" to="/conservation">Conservation</Nav.Link>
             <Nav.Link as={Link} className="navLink" to="/contact">Contact</Nav.Link>
             <NavDropdown title="Sponsor" id="basic-nav-dropdown" className="navLink">
-              <NavDropdown.Item href="/tiers">Tiers</NavDropdown.Item>
-              <NavDropdown.Item href="/sponsor">Sponsorship</NavDropdown.Item>
+              <NavDropdown.Item className="sponsDropDown"as={Link} to="/tiers">Tiers</NavDropdown.Item>
+              <NavDropdown.Item className="sponsDropDown"as={Link} to="/sponsor">Sponsorship</NavDropdown.Item>
             </NavDropdown>
             {/* {user ? <div>
               <button onClick={handleClick}>Log Out</button>

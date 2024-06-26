@@ -6,7 +6,7 @@ function Footer() {
   return (
     <footer>
       <Container>
-        <footer className="py-3 my-4">
+        <footer className=" my-4">
           <Nav className="justify-content-center mb-3">
             <Nav.Link>
               <Link to='/' className="nav-link text-body-secondary">Home</Link>

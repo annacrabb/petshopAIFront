@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Form, Button, Modal } from 'react-bootstrap';
+
 import BACKEND_URL from '../config' 
 
 const ContactForm = () => {
@@ -104,7 +105,10 @@ const ContactForm = () => {
 
             <Modal show={showModal} onHide={() => setShowModal(false)}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Message Sent</Modal.Title>
+                    <Modal.Title>
+                    <h2>
+                    Message Sent
+                    </h2></Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     Your message just made a big splash! We'll get back to you in no time.

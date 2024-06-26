@@ -1,4 +1,4 @@
-import React from 'react';
+ import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 
 
@@ -12,7 +12,9 @@ function Slide2({ text }) {
       />
       <Carousel.Caption>
         <h3>3D Printed Coral</h3>
-        <p className="carouselText ">Coastruction designs, produces, and installs 3D printed coral reefs to aid in the restoration of damaged reef systems and protect vulnerable coastlines. <a href="https://www.coastruction.com/">Learn more.</a></p>
+        <p className="carouselText ">Coastruction designs, produces, and installs 3D printed coral reefs to aid in the restoration of damaged reef systems and protect vulnerable coastlines.  
+        <br/>
+        <a className="text-light" href="https://www.coastruction.com/">Learn more.</a></p>
       </Carousel.Caption>
     </div>
   );

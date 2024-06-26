@@ -1,6 +1,6 @@
-// PetDetails.jsx
+
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 const PetDetails = ({ pet }) => {
 
@@ -14,6 +14,7 @@ const PetDetails = ({ pet }) => {
             <div className="col-lg pb-4">
                 <h5>{`${pet.petName} the ${pet.petType}`}</h5>
                 <img 
+                className="img-fluid"
                 width="550px" 
                 src={pet.picture} 
                 alt={pet.petType} 
@@ -26,7 +27,6 @@ const PetDetails = ({ pet }) => {
                     <p className="customBorder">{pet.desc}</p>
                     <p><em className="text-muted">${pet.cost} per month</em></p>
                     <button className="btn">Sponsor {pet.petName}</button>
-                    {/* <Link to={`/${pet._id}`} className="btn">Sponsor {pet.petName}</Link> */}
                 </span>
             </div>
         </div>
@@ -34,3 +34,5 @@ const PetDetails = ({ pet }) => {
 };
 
 export default PetDetails;
+
+{/* <Link to={`/${pet._id}`} className="btn">Sponsor {pet.petName}</Link> */}

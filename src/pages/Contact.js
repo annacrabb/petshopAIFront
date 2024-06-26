@@ -1,10 +1,11 @@
 import React from 'react';
+import { Row, Col } from 'react-bootstrap';
+import ContactForm from '../forms/ContactForm';
+import 'bootstrap-icons/font/bootstrap-icons.css';
+
+//import local photos
 import Banner from '../assets/contact.banner.jack.png';
 import Logo from '../assets/slimtidetogether.png';
-
-import { Row, Col } from 'react-bootstrap';
-
-import ContactForm from '../forms/ContactForm';
 
 const Contact = () => {
   return (
@@ -37,19 +38,19 @@ const Contact = () => {
             <Row>
               <Col xs={6} className="p-2">Email Address:</Col>
               <Col xs={6} className="p-2">
-                <a href="mailto:annacrabb92@gmail.com">tidetogether@coralreef.com</a>
+                <a className="text-body-secondary" href="mailto:annacrabb92@gmail.com">tidetogether@coralreef.com</a>
               </Col>
             </Row>
             <Row className="pt-3">
               <Col></Col>
               <Col>
-                <a href="https://kableacademy.com/" className="text-dark me-2">
+                <a href="https://annacrabb.github.io/portfolio/" className="text-dark me-2">
                   <i className="bi bi-twitter"></i>
                 </a>
-                <a href="https://kableacademy.com/" className="text-dark me-2">
+                <a href="https://annacrabb.github.io/portfolio/" className="text-dark me-2">
                   <i className="bi bi-facebook"></i>
                 </a>
-                <a href="https://kableacademy.com/" className="text-dark">
+                <a href="https://annacrabb.github.io/portfolio/" className="text-dark">
                   <i className="bi bi-instagram"></i>
                 </a>
               </Col>
@@ -57,6 +58,7 @@ const Contact = () => {
           </Col>
           <Col className="d-none d-xl-block">
             <iframe
+            className="mapBorder"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14950.352863093281!2d-86.98222425044698!3d20.482099480954794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4e574f76c1c891%3A0xe8f0bb7b26be098e!2sRoberta&#39;s%20Scuba%20Shack!5e0!3m2!1sen!2sus!4v1715104212581!5m2!1sen!2sus"
               width="100%"
               height="450"

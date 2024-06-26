@@ -12,7 +12,9 @@ function Slide3({ text }) {
       />
       <Carousel.Caption>
         <h3>Heat-Resistant Coral</h3>
-        <p className="carouselText">Researchers in Australia are working to breed heat-tolerant coral populations that can withstand rising temperatures. <a className="text-light" href="https://www.barrierreef.org/what-we-do/projects/growing-heat-tolerant-corals">Learn more.</a></p>
+        <p className="carouselText">Researchers in Australia are working to breed heat-tolerant coral populations that can withstand rising temperatures. 
+        <br/>
+        <a className="text-light" href="https://www.barrierreef.org/what-we-do/projects/growing-heat-tolerant-corals">Learn more.</a></p>
       </Carousel.Caption>
     </div>
   );

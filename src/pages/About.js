@@ -1,5 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Container, Row, Col, Image } from 'react-bootstrap';
+
+
+// Import local photos
 import Banner from '../assets/about.banner.jack.png';
 import Rays from '../assets/about.pic.1.jpg';
 import Turtle from '../assets/about.pic.2.jpg';
@@ -7,6 +10,8 @@ import Purple1 from '../assets/about.pic.3.png';
 import Purple2 from '../assets/about.pic.4.png';
 
 const About = () => {
+
+
   return (
     <div className="body">
       {/* Header Photo */}
@@ -44,7 +49,7 @@ const About = () => {
         <div className="pb-4 lead">
           By fostering a sense of community and empowerment, we aim to raise awareness about the challenges facing marine environments and inspire positive change. Through the combined efforts of passionate individuals and strategic funding, we strive to advance research, conservation, and advocacy efforts, ensuring a vibrant and resilient future for our oceans and the life they sustain.
         </div>
-        
+
         <Row>
           <Col md={6} className="pb-4">
             <Image src={Purple1} fluid alt="long purple coral" />

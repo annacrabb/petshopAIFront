@@ -1,8 +1,10 @@
 
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
-import Banner from '../assets/acknow.banner.png';
 import BACKEND_URL from '../config';
+
+//import local photos
+import Banner from '../assets/acknow.banner.png';
 
 const Acknowledgements = () => {
   const [sponsors, setSponsors] = useState([]);

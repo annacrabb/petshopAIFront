@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-//import { useAuthContext } from '../hooks/useAuthContext'; // Assuming this hook provides user info including token
+//import { useAuthContext } from '../hooks/useAuthContext'; 
+
 import BACKEND_URL from '../config'
 
 const PetDetailsPage = ({ match }) => {

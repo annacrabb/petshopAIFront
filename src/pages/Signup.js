@@ -1,17 +1,16 @@
 import React, { useState } from 'react';
 import { Form, Button, Container, Row, Col, Alert } from 'react-bootstrap';
 import { useSignup } from '../hooks/useSignup';
-import Success from '../components/Success'; 
 
-const Signup = ({ onSuccess }) => {
+const Signup = () => {
     const [email, setEmail] = useState('');
-    const { signup, error, isLoading } = useSignup();
-    const defaultPassword = 'defaultPassword123!';
+    const [password, setPassword] = useState('');
+    const defaultPassword = "defaultPassword123!";
+    const { signup, error, isLoading, successMessage } = useSignup();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         await signup(email, defaultPassword);
-        onSuccess(); 
     };
 
     return (
@@ -19,9 +18,9 @@ const Signup = ({ onSuccess }) => {
             <Row className="justify-content-center">
                 <Col md={9}>
                     <Form className="signup" onSubmit={handleSubmit}>
-                        <h6 className="text-center">Sign up to our mailing list to receive up-to-date information about current and upcoming projects!</h6>
+                        <p className="text-center">Sign up to our mailing list to receive updates about animals to sponsor, novel conservation efforts, and extra perks for our members!</p>
                         <Form.Group controlId="formBasicEmail">
-                            <Form.Label>Email</Form.Label>
+                            <Form.Label>Email address:</Form.Label>
                             <Form.Control
                                 type="email"
                                 placeholder="Enter email"
@@ -30,11 +29,26 @@ const Signup = ({ onSuccess }) => {
                             />
                         </Form.Group>
                         <br />
-                        <Button type="submit" disabled={isLoading} block>
+                        {/* <Form.Group controlId="formBasicPassword">
+                            <Form.Label>Password</Form.Label>
+                            <Form.Control
+                                type="password"
+                                placeholder="Password"
+                                onChange={(e) => setPassword(e.target.value)}
+                                value={password}
+                            />
+                        </Form.Group> */}
+                        <Button 
+                            className="btn" 
+                            type="submit" 
+                            disabled={isLoading}
+                            style={{ backgroundColor: '#c16dac', borderColor: '#c16dac' }}
+                            >
                             Sign Up
                         </Button>
 
                         {error && <Alert className="errorMsg mt-3">{error}</Alert>}
+                        {successMessage && <Alert variant="success" className="mt-3">{successMessage}</Alert>}
                     </Form>
                 </Col>
             </Row>

@@ -1,4 +1,6 @@
 import React from 'react';
+
+//import local photos
 import Banner from '../assets/home.banner.png';
 import Logo from '../assets/slimtidetogether.png';
 import Coral from '../assets/home.pic.1.png';
