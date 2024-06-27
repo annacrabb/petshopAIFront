@@ -10,13 +10,22 @@ import Brain from '../assets/home.pic.3.png';
 function Home() {
     return (
         <div className="body">
-            <div>
+            <div className="img-fluid banner">
                 <img
                     src={Banner}
-                    className="img-fluid"
                     width="100%"
                     alt="reef"
                 />
+                <p className="quote">
+                    <span className="blurred-text">
+                    The Sea, once it casts its spell, holds one in its net of wonder forever.
+                    </span>
+                </p>
+                <p className="quote">
+                    <span className="blurred-text" style={{ fontFamily: "Great Vibes" }}>
+                        -Jacques Cousteau
+                    </span>
+                </p>
             </div>
 
             {/* Title */}

@@ -28,8 +28,13 @@ function Footer() {
             </Nav.Link>
           </Nav>
           <hr/>
-          
-          <p className="text-center text-body-secondary">&copy; 2024 Tide Together, Inc</p>
+          <p className="text-center text-body-secondary">
+
+          <Nav.Link>
+            <Link to='/admin' className="text-body-secondary text-decoration-none">&copy; 2024 Tide Together, Inc</Link>
+          </Nav.Link>
+          </p>
+          {/* <p className="text-center text-body-secondary">&copy; 2024 Tide Together, Inc</p> */}
         </footer>
       </Container>
     </footer>

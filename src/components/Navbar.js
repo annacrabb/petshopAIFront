@@ -14,7 +14,7 @@ function CustomNav() {
   //   logout()
   // }
   return (
-    <Navbar expand="lg" sticky="top" className="nav">
+    <Navbar expand="md" sticky="top" className="nav">
       <Container>
         <Navbar.Brand href="/" className="navHeader">Tide Together</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

@@ -1,8 +1,38 @@
+@keyframes flyInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.quote {
+  color: #ebebeb;
+  position: relative;
+  left: 100px;
+  bottom: 150px;
+  /* font-style: italic; */
+  font-size: 40px;
+  display: flex;
+  font-family: "Bebas Neue";
+  animation: flyInFromRight 2s ease-out; /* Adjust duration and timing function as needed */
+}
+
+.blurred-text {
+  backdrop-filter: blur(50px) grayscale(25%);
+  /* border: 2px solid black; */
+  line-height:15px;
+
+  padding: 5px;
+}
+
 .carouselText {
   backdrop-filter: blur(50px);
   padding: 5px;
 }
-
 
 /* crab background */
 .body {
@@ -53,13 +83,13 @@
 footer.a.nav-link {
   padding: 8px 8px;
 }
- 
-.sponsDropDown:focus{
-background-color: #6dacc1;
+
+.sponsDropDown:focus {
+  background-color: #6dacc1;
 }
 
 
-.carouselCustom{
+.carouselCustom {
   max-width: 80%;
 }
 
@@ -109,7 +139,8 @@ button.btn:hover,
 
 }
 
-button.btn:focus, Button .btn:focus {
+button.btn:focus,
+Button .btn:focus {
   background-color: #c16dac !important;
 }
 
@@ -120,6 +151,7 @@ button.btn:focus, Button .btn:focus {
 
 nav {
   background-color: #6dacc1;
+  /* background-color: #92C1D1; */
 }
 
 .navHeader {
@@ -149,8 +181,14 @@ nav {
 
 .sponsorSelect {
   border-radius: 5px;
-
+  font-size: 1.25rem;
+  padding: 5px;
 }
+
+/* .sponsor{
+  display: flex;
+  justify-content: flex-start;
+} */
 
 .mapBorder {
   border: 2px solid gray;
@@ -164,7 +202,7 @@ nav {
   border: 2px solid gray;
 }
 
-.img{
+.img {
   border-radius: 10px;
 }
 
@@ -212,14 +250,16 @@ form .error {
 
 
 footer {
-  background-color: #D8C8E8;
+  background-color: #C8E0E8;
   padding-bottom: 1px;
   padding-top: 1px;
   /* font-style: italic; */
-  font-family: "Yellowtail";
-  font-size: 24px;
+  /* font-family: "Yellowtail"; */
+  font-size: 16px;
+  font-weight: bold;
 }
 
+footer Link {}
 
 .badge {
   background-color: #6dacc1 !important;
@@ -247,24 +287,14 @@ footer {
   padding-bottom: 1px;
 }
 
-.pet-image {
-  opacity: 0.5;
-  position: relative;
+.submitForm {
+  margin-bottom: 24px;
+  display: block;
+  justify-content: center
 }
 
-.custom-tooltip {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.75);
-  color: #fff;
-  font-size: 14px;
-  padding: 10px;
-  border-radius: 5px;
-  text-align: center;
-  z-index: 10;
-  /* Ensure the tooltip is above the image */
-  width: 100%;
-  /* Ensures the tooltip fits within the image */
+.adminPage {
+  display: block;
+  justify-content: center;
+
 }

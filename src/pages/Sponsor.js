@@ -37,25 +37,38 @@ function Sponsor() {
   return (
     <div className="body">
       {/* Header Photo */}
-      <div className="img-fluid">
+      <div className="img-fluid banner">
         <img
           src={Banner}
           width="100%"
           alt="reef"
         />
+        <p className="quote">
+          <span className="blurred-text">
+            The best way to observe a fish is to become a fish.
+          </span>
+        </p>
+        <p className="quote">
+          <span className="blurred-text" style={{fontFamily: "Great Vibes"}}>
+            -Jacques Cousteau
+          </span>
+        </p>
       </div>
+
 
       {/* Title */}
       <div className="container mt-5 text-center">
         <h1 className="customHeader">Sponsor</h1>
         <div className="lead mb-3">
-        Welcome to Tide Together, where you can dive into the world of sponsorship! Choose a tier below to see the marine animals you can sponsor. Your contributions help keep our coral reefs alive and kicking (or should we say, swimming)!
+          Welcome to Tide Together, where you can dive into the world of sponsorship! Choose a tier below to see the marine animals you can sponsor. Your contributions help keep our coral reefs alive and kicking (or should we say, swimming)!
         </div>
-        <select className="sponsorSelect" value={selectedTier} onChange={handleTierChange}>
-          <option value="tierOne">Tier One - Coral Crusader</option>
-          <option value="tierTwo">Tier Two - Reef Rangers</option>
-          <option value="tierThree">Tier Three - Ocean Ambassadors</option>
-        </select>
+        <div className="sponsor">
+          <select className="sponsorSelect" value={selectedTier} onChange={handleTierChange}>
+            <option value="tierOne">Tier One - Coral Crusader</option>
+            <option value="tierTwo">Tier Two - Reef Rangers</option>
+            <option value="tierThree">Tier Three - Ocean Ambassadors</option>
+          </select>
+        </div>
       </div>
 
       {/* Content */}

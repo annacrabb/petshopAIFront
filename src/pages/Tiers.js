@@ -19,14 +19,25 @@ function Tiers() {
 
     return (
         <div className="body">
-            {/* Header Photo */}
-            <div className="img-fluid">
-                <img
-                    src={Banner}
-                    width="100%"
-                    alt="reef"
-                />
-            </div>
+                  {/* Header Photo */}
+      <div className="img-fluid banner">
+        <img
+          src={Banner}
+          width="100%"
+          alt="reef"
+        />
+        <p className="quote">
+          <span className="blurred-text">
+            The best way to observe a fish is to become a fish.
+          </span>
+        </p>
+        <p className="quote">
+          <span className="blurred-text" style={{fontFamily: "Great Vibes"}}>
+            -Jacques Cousteau
+          </span>
+        </p>
+      </div>
+      
             <Container className="my-5 text-center">
                 <h1 className="customHeader">Sponsorship Tiers</h1>
             </Container>
@@ -210,7 +221,7 @@ function Tiers() {
             </Modal>
 
             {showSuccess && (
-                <Alert variant="success" className="mt-3 text-center">
+                <Alert className="mt-3 text-center">
                     Your email was added to our newsletter!
                 </Alert>
             )}

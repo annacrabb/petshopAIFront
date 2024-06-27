@@ -15,8 +15,22 @@ const About = () => {
   return (
     <div className="body">
       {/* Header Photo */}
-      <div>
-        <Image src={Banner} fluid width="100%" alt="reef" />
+      <div className="img-fluid banner">
+        <img
+          src={Banner}
+          width="100%"
+          alt="reef"
+        />
+        <p className="quote">
+          <span className="blurred-text">
+          Man has only to sink beneath the surface and he is free.
+          </span>
+        </p>
+        <p className="quote">
+          <span className="blurred-text" style={{fontFamily: "Great Vibes"}}>
+            -Jacques Cousteau
+          </span>
+        </p>
       </div>
 
       {/* Title */}

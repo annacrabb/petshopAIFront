@@ -15,9 +15,23 @@ import Banner from '../assets/conservation.banner.jack.png';
 const Conservation = () => {
   return (
     <div className="body">
-      {/* Header Photo */}
-      <div>
-        <img src={Banner} className="img-fluid" width="100%" alt="reef" />
+     {/* Header Photo */}
+     <div className="img-fluid banner">
+        <img
+          src={Banner}
+          width="100%"
+          alt="reef"
+        />
+        <p className="quote">
+          <span className="blurred-text">
+          The future of mankind depends on our ability to save the ocean.
+          </span>
+        </p>
+        <p className="quote">
+          <span className="blurred-text" style={{fontFamily: "Great Vibes"}}>
+            -Jacques Cousteau
+          </span>
+        </p>
       </div>
 
       {/* Title */}

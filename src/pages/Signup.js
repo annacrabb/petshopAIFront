@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Form, Button, Container, Row, Col, Alert } from 'react-bootstrap';
 import { useSignup } from '../hooks/useSignup';
+import { Link } from 'react';
 
 const Signup = () => {
     const [email, setEmail] = useState('');
@@ -16,9 +17,9 @@ const Signup = () => {
     return (
         <Container>
             <Row className="justify-content-center">
-                <Col md={9}>
+                <Col md={12}>
                     <Form className="signup" onSubmit={handleSubmit}>
-                        <p className="text-center">Sign up to our mailing list to receive updates about animals to sponsor, novel conservation efforts, and extra perks for our members!</p>
+                        <p className="text-center">Sign up to receive updates about animals to sponsor, novel conservation efforts, and extra perks for our members!</p>
                         <Form.Group controlId="formBasicEmail">
                             <Form.Label>Email address:</Form.Label>
                             <Form.Control
@@ -48,7 +49,7 @@ const Signup = () => {
                         </Button>
 
                         {error && <Alert className="errorMsg mt-3">{error}</Alert>}
-                        {successMessage && <Alert variant="success" className="mt-3">{successMessage}</Alert>}
+                        {successMessage && <Alert className="successMsg mt-3">{successMessage}</Alert>}
                     </Form>
                 </Col>
             </Row>

@@ -11,10 +11,12 @@ function Slide4({ text }) {
         alt={text}
       />
       <Carousel.Caption>
-        <h3>AI and Mammal Detection</h3>
-        <p className="carouselText">Whale Seeker is a Canadian startup that uses artificial intelligence and human expertise to provide marine mammal detection. This aids in preventing collisions with fishing, cargo, or other marine vessels. 
-        <br/>
-        <a className="text-light" href="https://www.barrierreef.org/what-we-do/projects/growing-heat-tolerant-corals">Learn more.</a></p>
+          <h3>
+            AI and Mammal Detection
+          </h3>
+        <p className="carouselText">Whale Seeker is a Canadian startup that uses artificial intelligence and human expertise to provide marine mammal detection. This aids in preventing collisions with fishing, cargo, or other marine vessels.
+          <br />
+          <a className="text-light" href="https://www.barrierreef.org/what-we-do/projects/growing-heat-tolerant-corals">Learn more.</a></p>
       </Carousel.Caption>
     </div>
   );

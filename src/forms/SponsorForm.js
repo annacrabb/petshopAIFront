@@ -33,7 +33,7 @@ const SponsorForm = () => {
 
   return (
     <Form className="create container" onSubmit={handleSubmit}>
-      <h3>Add a New Sponsor</h3>
+      <h2>Add a New Sponsor</h2>
       <Form.Group className="mb-3" controlId="formSponsorName">
         <Form.Label>Sponsor Name:</Form.Label>
         <Form.Control

@@ -16,6 +16,7 @@ import SponsorForm from './forms/SponsorForm';
 import Login from './pages/Login';
 import Tiers from './pages/Tiers';
 import PetDetailsPage from './pages/PetDetailsPage';
+import Admin from './pages/Admin';
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
           <Route path='/newpet' element={<PetForm />} />
           <Route path='/newsponsor' element={<SponsorForm />} />
           <Route path='/tiers' element={<Tiers />} />
+          <Route path='/admin' element={<Admin />} />
           {/* <Route
             path='/sponsor'
             element={user ? <Sponsor /> : <Navigate to="/login" />} /> */}

@@ -10,9 +10,23 @@ import Logo from '../assets/slimtidetogether.png';
 const Contact = () => {
   return (
     <div className="body">
-      {/* Header Photo */}
-      <div>
-        <img src={Banner} className="img-fluid w-100" alt="reef" />
+{/* Header Photo */}
+<div className="img-fluid banner">
+        <img
+          src={Banner}
+          width="100%"
+          alt="reef"
+        />
+        <p className="quote">
+          <span className="blurred-text">
+          People protect what they love.
+          </span>
+        </p>
+        <p className="quote">
+          <span className="blurred-text" style={{fontFamily: "Great Vibes"}}>
+            -Jacques Cousteau
+          </span>
+        </p>
       </div>
 
       {/* Title */}
