@@ -43,16 +43,18 @@ function Sponsor() {
           width="100%"
           alt="reef"
         />
-        <p className="quote">
-          <span className="blurred-text">
-            The best way to observe a fish is to become a fish.
-          </span>
-        </p>
-        <p className="quote">
-          <span className="blurred-text" style={{fontFamily: "Great Vibes"}}>
-            -Jacques Cousteau
-          </span>
-        </p>
+        <div className="d-none d-md-block">
+          <p className="quote">
+            <span className="blurred-text">
+              The best way to observe a fish is to become a fish.
+            </span>
+          </p>
+          <p className="quote">
+            <span className="blurred-text" style={{ fontFamily: "Great Vibes" }}>
+              -Jacques Cousteau
+            </span>
+          </p>
+        </div>
       </div>
 
 

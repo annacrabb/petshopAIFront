@@ -1,13 +1,14 @@
 import React from 'react';
 import { Container, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import bluecrab from '../assets/bluecrab.png'; 
 
 function Footer() {
   return (
     <footer>
       <Container>
-        <footer className=" my-4">
-          <Nav className="justify-content-center mb-3">
+        <footer className="my-4">
+          <Nav className="justify-content-center">
             <Nav.Link>
               <Link to='/' className="nav-link text-body-secondary">Home</Link>
             </Nav.Link>
@@ -28,13 +29,11 @@ function Footer() {
             </Nav.Link>
           </Nav>
           <hr/>
-          <p className="text-center text-body-secondary">
-
-          <Nav.Link>
-            <Link to='/admin' className="text-body-secondary text-decoration-none">&copy; 2024 Tide Together, Inc</Link>
-          </Nav.Link>
-          </p>
-          {/* <p className="text-center text-body-secondary">&copy; 2024 Tide Together, Inc</p> */}
+          <div className="text-center">
+            <Nav.Link as={Link} to='/admin'>
+              <img src={bluecrab} alt="Tide Together Trademark" style={{ maxWidth: '100px' }} />
+            </Nav.Link>
+          </div>
         </footer>
       </Container>
     </footer>

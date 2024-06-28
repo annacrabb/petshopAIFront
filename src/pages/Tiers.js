@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Card, Badge, Container, Row, Col, Modal, Button, Alert } from 'react-bootstrap';
-
+import { Card, Badge, Container, Row, Col, Modal, Button } from 'react-bootstrap';
 import Signup from '../pages/Signup';
 import Banner from "../assets/sponsor.banner.png";
 
@@ -19,25 +18,23 @@ function Tiers() {
 
     return (
         <div className="body">
-                  {/* Header Photo */}
-      <div className="img-fluid banner">
-        <img
-          src={Banner}
-          width="100%"
-          alt="reef"
-        />
-        <p className="quote">
-          <span className="blurred-text">
-            The best way to observe a fish is to become a fish.
-          </span>
-        </p>
-        <p className="quote">
-          <span className="blurred-text" style={{fontFamily: "Great Vibes"}}>
-            -Jacques Cousteau
-          </span>
-        </p>
-      </div>
-      
+            {/* Header Photo */}
+            <div className="img-fluid banner">
+                <img src={Banner} width="100%" alt="reef" />
+                <div className="d-none d-md-block">
+                    <p className="quote">
+                        <span className="blurred-text">
+                            The best way to observe a fish is to become a fish.
+                        </span>
+                    </p>
+                    <p className="quote">
+                        <span className="blurred-text" style={{ fontFamily: "Great Vibes" }}>
+                            -Jacques Cousteau
+                        </span>
+                    </p>
+                </div>
+            </div>
+
             <Container className="my-5 text-center">
                 <h1 className="customHeader">Sponsorship Tiers</h1>
             </Container>
@@ -183,6 +180,7 @@ function Tiers() {
                                                 <div className="card-badge">
                                                     <Badge variant="info">Website Recognition</Badge>
                                                 </div>
+
                                                 <Card.Text>
                                                     Recognition on the website as a sponsor, with the option to include a personal message or dedication.
                                                 </Card.Text>
@@ -221,9 +219,9 @@ function Tiers() {
             </Modal>
 
             {showSuccess && (
-                <Alert className="mt-3 text-center">
+                <div className="successMsg mt-3 text-center">
                     Your email was added to our newsletter!
-                </Alert>
+                </div>
             )}
         </div>
     );

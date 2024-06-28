@@ -10,23 +10,25 @@ import Logo from '../assets/slimtidetogether.png';
 const Contact = () => {
   return (
     <div className="body">
-{/* Header Photo */}
-<div className="img-fluid banner">
+      {/* Header Photo */}
+      <div className="img-fluid banner">
         <img
           src={Banner}
           width="100%"
           alt="reef"
         />
-        <p className="quote">
-          <span className="blurred-text">
-          People protect what they love.
-          </span>
-        </p>
-        <p className="quote">
-          <span className="blurred-text" style={{fontFamily: "Great Vibes"}}>
-            -Jacques Cousteau
-          </span>
-        </p>
+        <div className="d-none d-md-block">
+          <p className="quote">
+            <span className="blurred-text">
+              People protect what they love.
+            </span>
+          </p>
+          <p className="quote">
+            <span className="blurred-text" style={{ fontFamily: "Great Vibes" }}>
+              -Jacques Cousteau
+            </span>
+          </p>
+        </div>
       </div>
 
       {/* Title */}
@@ -72,7 +74,7 @@ const Contact = () => {
           </Col>
           <Col className="d-none d-xl-block">
             <iframe
-            className="mapBorder"
+              className="mapBorder"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14950.352863093281!2d-86.98222425044698!3d20.482099480954794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4e574f76c1c891%3A0xe8f0bb7b26be098e!2sRoberta&#39;s%20Scuba%20Shack!5e0!3m2!1sen!2sus!4v1715104212581!5m2!1sen!2sus"
               width="100%"
               height="450"

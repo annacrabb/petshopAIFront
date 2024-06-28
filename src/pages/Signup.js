@@ -3,7 +3,7 @@ import { Form, Button, Container, Row, Col, Alert } from 'react-bootstrap';
 import { useSignup } from '../hooks/useSignup';
 import { Link } from 'react';
 
-const Signup = () => {
+const Signup = ({ onSuccess }) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const defaultPassword = "defaultPassword123!";
@@ -12,6 +12,9 @@ const Signup = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         await signup(email, defaultPassword);
+        if (successMessage) {
+            onSuccess();
+        }
     };
 
     return (
@@ -44,12 +47,12 @@ const Signup = () => {
                             type="submit" 
                             disabled={isLoading}
                             style={{ backgroundColor: '#c16dac', borderColor: '#c16dac' }}
-                            >
+                        >
                             Sign Up
                         </Button>
 
-                        {error && <Alert className="errorMsg mt-3">{error}</Alert>}
-                        {successMessage && <Alert className="successMsg mt-3">{successMessage}</Alert>}
+                        {error && <div className="errorMsg mt-3">{error}</div>}
+                        {successMessage && <div className="successMsg mt-3">{successMessage}</div>}
                     </Form>
                 </Col>
             </Row>

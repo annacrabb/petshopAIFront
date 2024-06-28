@@ -11,7 +11,6 @@ import Contact from './pages/Contact';
 import Sponsor from './pages/Sponsor';
 import Acknowledgements from './pages/Acknowledgements';
 import Signup from './pages/Signup';
-import PetForm from './forms/PetForm';
 import SponsorForm from './forms/SponsorForm';
 import Login from './pages/Login';
 import Tiers from './pages/Tiers';
@@ -33,7 +32,6 @@ function App() {
           <Route path='/contact' element={<Contact />} />
           <Route path='/about' element={<About />} />
           <Route path='/acknowledgements' element={<Acknowledgements />} />
-          <Route path='/newpet' element={<PetForm />} />
           <Route path='/newsponsor' element={<SponsorForm />} />
           <Route path='/tiers' element={<Tiers />} />
           <Route path='/admin' element={<Admin />} />

@@ -71,7 +71,7 @@ const Acknowledgements = () => {
         </a>{" "}
         to see more of his work.
       </div>
-      <div className="container my-5">
+      <div className="container">
         Tide Together: Marine Life Sponsorship is dedicated to the dear memory of Jack's wife Diane.
       </div>
     </div>

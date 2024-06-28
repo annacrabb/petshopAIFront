@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom'
 import { Container, Row, Col, Image } from 'react-bootstrap';
 
 
@@ -10,8 +11,6 @@ import Purple1 from '../assets/about.pic.3.png';
 import Purple2 from '../assets/about.pic.4.png';
 
 const About = () => {
-
-
   return (
     <div className="body">
       {/* Header Photo */}
@@ -21,16 +20,18 @@ const About = () => {
           width="100%"
           alt="reef"
         />
-        <p className="quote">
-          <span className="blurred-text">
-          Man has only to sink beneath the surface and he is free.
-          </span>
-        </p>
-        <p className="quote">
-          <span className="blurred-text" style={{fontFamily: "Great Vibes"}}>
-            -Jacques Cousteau
-          </span>
-        </p>
+        <div className="d-none d-md-block">
+          <p className="quote">
+            <span className="blurred-text">
+              Man has only to sink beneath the surface and he is free.
+            </span>
+          </p>
+          <p className="quote">
+            <span className="blurred-text" style={{ fontFamily: "Great Vibes" }}>
+              -Jacques Cousteau
+            </span>
+          </p>
+        </div>
       </div>
 
       {/* Title */}
@@ -56,12 +57,14 @@ const About = () => {
           </Col>
         </Row>
 
+
+
         <div className="pb-4 lead">
-          We understand that not everyone can explore the depths firsthand, but our platform offers alternative ways to engage with and support marine ecosystems. Whether through sponsoring marine life, participating in educational initiatives, or advocating for sustainable practices, every action taken on Tide Together contributes to the collective effort of protecting our oceans.
+          We understand that not everyone can explore the depths firsthand, but our platform offers alternative ways to engage with and support marine ecosystems. Whether through sponsoring marine life, participating in educational initiatives, or advocating for sustainable practices, every action on Tide Together contributes to protecting our oceans.
         </div>
 
         <div className="pb-4 lead">
-          By fostering a sense of community and empowerment, we aim to raise awareness about the challenges facing marine environments and inspire positive change. Through the combined efforts of passionate individuals and strategic funding, we strive to advance research, conservation, and advocacy efforts, ensuring a vibrant and resilient future for our oceans and the life they sustain.
+          Our platform offers three sponsorship tiers to suit different levels of engagement and impact. Tier One (Coral Crusaders) supports the smallest sea life, like nudibranchs, seahorses, and shrimps. Sponsors at this level receive a certificate and a newsletter. Tier Two (Reef Rangers) supports medium-sized animals, such as angelfish, sea turtles, and sea stars, with rewards including a t-shirt or bucket hat. Tier Three (Ocean Ambassadors) supports larger animals like sharks, stingrays, and octopuses, offering bigger rewards such as a virtual dive experience and VIP event invitations.
         </div>
 
         <Row>
@@ -74,7 +77,7 @@ const About = () => {
         </Row>
 
         <div className="lead">
-          Join us in our mission to explore, conserve, and cherish the wonders of the deep blue sea. Together, we can make a meaningful difference for marine biodiversity and the health of our planet.
+          For more detailed information on the coral reef research we support, <Link to='/conservation' className="text-body-secondary">click here</Link>. To learn more about our sponsorship tiers and their benefits, <Link to='/tiers' className="text-body-secondary">click here</Link>. By fostering a sense of community and empowerment, we strive to advance research, conservation, and advocacy efforts, ensuring a vibrant and resilient future for our oceans and the life they sustain. Join us in our mission to explore, conserve, and cherish the wonders of the deep blue sea. Together, we can make a meaningful difference for marine biodiversity and the health of our planet.
         </div>
       </Container>
     </div>
