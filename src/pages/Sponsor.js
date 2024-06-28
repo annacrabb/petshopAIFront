@@ -59,12 +59,16 @@ function Sponsor() {
 
 
       {/* Title */}
-      <div className="container mt-5 text-center">
-        <h1 className="customHeader">Sponsor</h1>
-        <div className="lead mb-3">
-          Welcome to Tide Together, where you can dive into the world of sponsorship! Choose a tier below to see the marine animals you can sponsor. Your contributions help keep our coral reefs alive and kicking (or should we say, swimming)!
+      <div className="container my-5 text-center">
+        <h1>Sponsor</h1>
+      </div>
+
+      {/* Content - Sponsor */}
+      <div>
+        <div className="container text-center lead mb-3">
+          Welcome to Tide Together, where you can dive into the world of sponsorship! Choose a tier below to see the marine animals available to sponsor. Your contributions help keep our coral reefs alive and kicking (or should we say, swimming)!
         </div>
-        <div className="sponsor">
+        <div className="sponsor text-center">
           <select className="sponsorSelect" value={selectedTier} onChange={handleTierChange}>
             <option value="tierOne">Tier One - Coral Crusader</option>
             <option value="tierTwo">Tier Two - Reef Rangers</option>

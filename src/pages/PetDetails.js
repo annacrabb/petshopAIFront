@@ -10,8 +10,7 @@ const PetDetails = ({ pet }) => {
     const handleClose = () => setShowModal(false);
     const handleSuccess = () => {
         setShowModal(false);
-        setShowSuccess(true);
-        setTimeout(() => setShowSuccess(false), 5000); // Automatically hide the success message after 5 seconds
+        setShowSuccess(true);     
     };
 
     // Function to handle image load error
@@ -56,7 +55,7 @@ const PetDetails = ({ pet }) => {
 
             {showSuccess && (
                 <div className="successMsg mt-3 text-center">
-                    Your email was added to our newsletter!
+                    Successfully signed up!
                 </div>
             )}
         </div>

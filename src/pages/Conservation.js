@@ -37,9 +37,9 @@ const Conservation = () => {
       </div>
 
       {/* Title */}
-      <div className="container my-5 text-center customHeader">
-        <h1 className="customHeader">Conservation</h1>
-      </div>
+      <Container className="my-5 my-md-5 text-center">
+        <h1>Conservation</h1>
+      </Container>
 
       {/* Content - Conservation */}
       <div className="container my-5 lead">

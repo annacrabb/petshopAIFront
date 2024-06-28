@@ -1,7 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import { Container, Row, Col, Image } from 'react-bootstrap';
-
 
 // Import local photos
 import Banner from '../assets/about.banner.jack.png';
@@ -35,9 +34,9 @@ const About = () => {
       </div>
 
       {/* Title */}
-      <Container className="my-5 text-center">
+      <div className="container my-5 text-center">
         <h1>About Us</h1>
-      </Container>
+      </div>
 
       {/* Content - About */}
       <Container>
@@ -48,7 +47,7 @@ const About = () => {
           Driven by a deep passion for the ocean's beauty and biodiversity, we provide a platform where individuals can actively contribute to the preservation of marine life. Through our sponsorship program, users have the opportunity to directly support the conservation of specific marine animals, fostering a personal connection with the underwater world.
         </div>
 
-        <Row>
+        <Row className="d-none d-md-flex">
           <Col md={6} className="pb-4">
             <Image src={Rays} fluid alt="sting rays being photographed by a diver" />
           </Col>
@@ -56,8 +55,6 @@ const About = () => {
             <Image src={Turtle} fluid alt="turtle swimming along a reef" />
           </Col>
         </Row>
-
-
 
         <div className="pb-4 lead">
           We understand that not everyone can explore the depths firsthand, but our platform offers alternative ways to engage with and support marine ecosystems. Whether through sponsoring marine life, participating in educational initiatives, or advocating for sustainable practices, every action on Tide Together contributes to protecting our oceans.
@@ -67,7 +64,7 @@ const About = () => {
           Our platform offers three sponsorship tiers to suit different levels of engagement and impact. Tier One (Coral Crusaders) supports the smallest sea life, like nudibranchs, seahorses, and shrimps. Sponsors at this level receive a certificate and a newsletter. Tier Two (Reef Rangers) supports medium-sized animals, such as angelfish, sea turtles, and sea stars, with rewards including a t-shirt or bucket hat. Tier Three (Ocean Ambassadors) supports larger animals like sharks, stingrays, and octopuses, offering bigger rewards such as a virtual dive experience and VIP event invitations.
         </div>
 
-        <Row>
+        <Row className="d-none d-md-flex">
           <Col md={6} className="pb-4">
             <Image src={Purple1} fluid alt="long purple coral" />
           </Col>

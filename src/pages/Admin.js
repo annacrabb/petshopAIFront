@@ -6,7 +6,7 @@ const Admin = () => {
     const [password, setPassword] = useState('');
     const [error, setError] = useState(null);
     const [isAuthenticated, setIsAuthenticated] = useState(false);
-    const correctPassword = 'your-password';
+    const correctPassword = 'scifi';
 
     const handlePasswordChange = (e) => {
         setPassword(e.target.value);

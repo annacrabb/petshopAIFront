@@ -22,7 +22,6 @@
 
 .blurred-text {
   backdrop-filter: blur(50px) grayscale(25%);
-  line-height: 15px;
   line-height: .75;
   max-width: 95%;
   padding: 5px;
@@ -38,7 +37,7 @@
     font-size: 35px;
   }
 }
-@media (max-width: 768){
+@media (max-width: 768px){
   .quote{
     font-size: 30px;
     left: 50px;
